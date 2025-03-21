@@ -75,7 +75,7 @@ class JointPositionChanger : public System,
 };
 }  // namespace change_plugin
 
-GZ_ADD_PLUGIN(change_plugin::JointPositionChanger,
+IGNITION_ADD_PLUGIN(change_plugin::JointPositionChanger,
                     gz::sim::System,
                     change_plugin::JointPositionChanger::ISystemConfigure,
                     change_plugin::JointPositionChanger::ISystemPreUpdate)

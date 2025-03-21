@@ -18,7 +18,6 @@
 // We'll use a string and the gzmsg command below for a brief example.
 // Remove these includes if your plugin doesn't need them.
 #include <string>
-#include <format>
 #include <iostream>
 #include <gz/common/Console.hh>
 // This header is required to register plugins. It's good practice to place it
@@ -30,7 +29,7 @@
 
 // This is required to register the plugin. Make sure the interfaces match
 // what's in the header.
-GZ_ADD_PLUGIN(
+IGNITION_ADD_PLUGIN(
     hello_world::HelloWorld,
     gz::sim::System,
     hello_world::HelloWorld::ISystemPostUpdate)
@@ -58,9 +57,9 @@ void HelloWorld::PostUpdate(const gz::sim::UpdateInfo &_info,
     msg=result;
   
   }
-  // Messages printed with gzmsg only show when running with verbosity 3 or
+  // Messages printed with ignmsg only show when running with verbosity 3 or
   // higher (i.e. gz sim -v 3)
   
-  gzmsg << msg << std::endl;
+  ignmsg << msg << std::endl;
 
 }

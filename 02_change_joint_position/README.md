@@ -20,4 +20,4 @@ export GZ_SIM_SYSTEM_PLUGIN_PATH=`pwd`/build
 
 Then run a world that loads the plugin as follows:
 
-    gz sim -r -v 4 joint_position_changer.sdf
+    ign gazebo -r -v 4 joint_position_changer.sdf

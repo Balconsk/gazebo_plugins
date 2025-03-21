@@ -5,7 +5,7 @@ mkdir build
 cd ./build
 cmake ..
 make .
-export GZ_SIM_SYSTEM_PLUGIN_PATH=$PWD
 cd ..
-gz sim hello_world_plugin.sdf -v3
+export GZ_SIM_SYSTEM_PLUGIN_PATH=`pwd`/build
+ign gazebo hello_world_plugin.sdf -v3
 ```
